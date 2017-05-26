@@ -8,6 +8,11 @@
  *
  * @author Khofi Muffin
  */
+
+import sun.audio.*;
+import javax.swing.*; 
+import java.io.*;
+
 public class main extends javax.swing.JFrame {
     int pertama;
     int kedua;
@@ -43,15 +48,19 @@ public class main extends javax.swing.JFrame {
         minus = new javax.swing.JButton();
         per = new javax.swing.JButton();
         but1 = new javax.swing.JButton();
-        jButton20 = new javax.swing.JButton();
+        clear = new javax.swing.JButton();
         multi = new javax.swing.JButton();
         look = new javax.swing.JTextField();
         but3 = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 204, 204));
         getContentPane().setLayout(null);
 
+        equal.setBackground(new java.awt.Color(255, 255, 255));
         equal.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
+        equal.setIcon(new javax.swing.ImageIcon("F:\\PBO\\tugas akhir\\=.png")); // NOI18N
         equal.setText("=");
         equal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -59,9 +68,11 @@ public class main extends javax.swing.JFrame {
             }
         });
         getContentPane().add(equal);
-        equal.setBounds(480, 250, 70, 220);
+        equal.setBounds(600, 250, 120, 220);
 
+        but2.setBackground(new java.awt.Color(255, 255, 255));
         but2.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
+        but2.setIcon(new javax.swing.ImageIcon("F:\\PBO\\tugas akhir\\2.png")); // NOI18N
         but2.setText("2");
         but2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -69,9 +80,11 @@ public class main extends javax.swing.JFrame {
             }
         });
         getContentPane().add(but2);
-        but2.setBounds(120, 170, 70, 60);
+        but2.setBounds(150, 170, 110, 60);
 
+        but6.setBackground(new java.awt.Color(255, 255, 255));
         but6.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
+        but6.setIcon(new javax.swing.ImageIcon("F:\\PBO\\tugas akhir\\6.png")); // NOI18N
         but6.setText("6");
         but6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -79,9 +92,11 @@ public class main extends javax.swing.JFrame {
             }
         });
         getContentPane().add(but6);
-        but6.setBounds(210, 250, 70, 60);
+        but6.setBounds(270, 250, 110, 60);
 
+        but4.setBackground(new java.awt.Color(255, 255, 255));
         but4.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
+        but4.setIcon(new javax.swing.ImageIcon("F:\\PBO\\tugas akhir\\4.jpg")); // NOI18N
         but4.setText("4");
         but4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -89,9 +104,11 @@ public class main extends javax.swing.JFrame {
             }
         });
         getContentPane().add(but4);
-        but4.setBounds(30, 250, 70, 60);
+        but4.setBounds(30, 250, 110, 60);
 
+        but5.setBackground(new java.awt.Color(255, 255, 255));
         but5.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
+        but5.setIcon(new javax.swing.ImageIcon("F:\\PBO\\tugas akhir\\5.png")); // NOI18N
         but5.setText("5");
         but5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -99,9 +116,11 @@ public class main extends javax.swing.JFrame {
             }
         });
         getContentPane().add(but5);
-        but5.setBounds(120, 250, 70, 60);
+        but5.setBounds(150, 250, 110, 60);
 
+        but0.setBackground(new java.awt.Color(255, 255, 255));
         but0.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
+        but0.setIcon(new javax.swing.ImageIcon("F:\\PBO\\tugas akhir\\0.png")); // NOI18N
         but0.setText("0");
         but0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -109,9 +128,11 @@ public class main extends javax.swing.JFrame {
             }
         });
         getContentPane().add(but0);
-        but0.setBounds(30, 410, 250, 60);
+        but0.setBounds(30, 410, 350, 60);
 
+        but8.setBackground(new java.awt.Color(255, 255, 255));
         but8.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
+        but8.setIcon(new javax.swing.ImageIcon("F:\\PBO\\tugas akhir\\8.png")); // NOI18N
         but8.setText("8");
         but8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -119,9 +140,11 @@ public class main extends javax.swing.JFrame {
             }
         });
         getContentPane().add(but8);
-        but8.setBounds(120, 330, 70, 60);
+        but8.setBounds(150, 330, 110, 60);
 
+        but7.setBackground(new java.awt.Color(255, 255, 255));
         but7.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
+        but7.setIcon(new javax.swing.ImageIcon("F:\\PBO\\tugas akhir\\7.png")); // NOI18N
         but7.setText("7");
         but7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -129,9 +152,11 @@ public class main extends javax.swing.JFrame {
             }
         });
         getContentPane().add(but7);
-        but7.setBounds(30, 330, 70, 60);
+        but7.setBounds(30, 330, 110, 60);
 
+        but9.setBackground(new java.awt.Color(255, 255, 255));
         but9.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
+        but9.setIcon(new javax.swing.ImageIcon("F:\\PBO\\tugas akhir\\9.png")); // NOI18N
         but9.setText("9");
         but9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -139,9 +164,11 @@ public class main extends javax.swing.JFrame {
             }
         });
         getContentPane().add(but9);
-        but9.setBounds(210, 330, 70, 60);
+        but9.setBounds(270, 330, 110, 60);
 
+        plus.setBackground(new java.awt.Color(255, 255, 255));
         plus.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
+        plus.setIcon(new javax.swing.ImageIcon("F:\\PBO\\tugas akhir\\+.png")); // NOI18N
         plus.setText("+");
         plus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -149,9 +176,11 @@ public class main extends javax.swing.JFrame {
             }
         });
         getContentPane().add(plus);
-        plus.setBounds(300, 170, 160, 60);
+        plus.setBounds(390, 170, 200, 60);
 
+        minus.setBackground(new java.awt.Color(255, 255, 255));
         minus.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
+        minus.setIcon(new javax.swing.ImageIcon("F:\\PBO\\tugas akhir\\-.png")); // NOI18N
         minus.setText("-");
         minus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -159,9 +188,11 @@ public class main extends javax.swing.JFrame {
             }
         });
         getContentPane().add(minus);
-        minus.setBounds(300, 250, 160, 60);
+        minus.setBounds(390, 250, 200, 60);
 
+        per.setBackground(new java.awt.Color(255, 255, 255));
         per.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
+        per.setIcon(new javax.swing.ImageIcon("F:\\PBO\\tugas akhir\\per.png")); // NOI18N
         per.setText("/");
         per.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -169,9 +200,11 @@ public class main extends javax.swing.JFrame {
             }
         });
         getContentPane().add(per);
-        per.setBounds(300, 410, 160, 60);
+        per.setBounds(390, 410, 200, 60);
 
+        but1.setBackground(new java.awt.Color(255, 255, 255));
         but1.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
+        but1.setIcon(new javax.swing.ImageIcon("F:\\PBO\\tugas akhir\\1.png")); // NOI18N
         but1.setText("1");
         but1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -179,19 +212,23 @@ public class main extends javax.swing.JFrame {
             }
         });
         getContentPane().add(but1);
-        but1.setBounds(30, 170, 70, 60);
+        but1.setBounds(30, 170, 110, 60);
 
-        jButton20.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jButton20.setText("C");
-        jButton20.addActionListener(new java.awt.event.ActionListener() {
+        clear.setBackground(new java.awt.Color(255, 255, 255));
+        clear.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        clear.setIcon(new javax.swing.ImageIcon("F:\\PBO\\tugas akhir\\cl.png")); // NOI18N
+        clear.setText("C");
+        clear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton20ActionPerformed(evt);
+                clearActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton20);
-        jButton20.setBounds(480, 170, 70, 60);
+        getContentPane().add(clear);
+        clear.setBounds(600, 170, 120, 60);
 
+        multi.setBackground(new java.awt.Color(255, 255, 255));
         multi.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
+        multi.setIcon(new javax.swing.ImageIcon("F:\\PBO\\tugas akhir\\x.png")); // NOI18N
         multi.setText("*");
         multi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -199,13 +236,15 @@ public class main extends javax.swing.JFrame {
             }
         });
         getContentPane().add(multi);
-        multi.setBounds(300, 330, 160, 60);
+        multi.setBounds(390, 330, 200, 60);
 
         look.setFont(new java.awt.Font("Tahoma", 1, 56)); // NOI18N
         getContentPane().add(look);
-        look.setBounds(30, 30, 520, 120);
+        look.setBounds(30, 30, 690, 120);
 
+        but3.setBackground(new java.awt.Color(255, 255, 255));
         but3.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
+        but3.setIcon(new javax.swing.ImageIcon("F:\\PBO\\tugas akhir\\3.png")); // NOI18N
         but3.setText("3");
         but3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -213,69 +252,169 @@ public class main extends javax.swing.JFrame {
             }
         });
         getContentPane().add(but3);
-        but3.setBounds(210, 170, 70, 60);
+        but3.setBounds(270, 170, 110, 60);
 
-        setBounds(0, 0, 595, 539);
+        jPanel1.setBackground(new java.awt.Color(255, 204, 255));
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 0, 760, 500);
+
+        setBounds(0, 0, 770, 539);
     }// </editor-fold>//GEN-END:initComponents
 
     private void but1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_but1ActionPerformed
         // TODO add your handling code here:
         String Enternumber = look.getText()+but1.getText();
         look.setText(Enternumber);
+             
+        InputStream in;        
+        try{            
+            in = new FileInputStream(new File("F:\\PBO\\tugas akhir\\1.wav"));            
+            AudioStream audios = new AudioStream(in);            
+            AudioPlayer.player.start(audios);        
+        }catch(Exception e){                    
+            JOptionPane.showMessageDialog(null, e);                
+        }
+        
     }//GEN-LAST:event_but1ActionPerformed
 
     private void but2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_but2ActionPerformed
         // TODO add your handling code here:
         String Enternumber = look.getText()+but2.getText();
-        look.setText(Enternumber);
+        look.setText(Enternumber);   
+        
+        InputStream in;        
+        try{            
+            in = new FileInputStream(new File("F:\\PBO\\tugas akhir\\2.wav"));            
+            AudioStream audios = new AudioStream(in);            
+            AudioPlayer.player.start(audios);        
+        }catch(Exception e){                    
+            JOptionPane.showMessageDialog(null, e);                
+        }
+        
     }//GEN-LAST:event_but2ActionPerformed
 
     private void but3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_but3ActionPerformed
         // TODO add your handling code here:
         String Enternumber = look.getText()+but3.getText();
         look.setText(Enternumber);
+        
+        InputStream in;        
+        try{            
+            in = new FileInputStream(new File("F:\\PBO\\tugas akhir\\3.wav"));            
+            AudioStream audios = new AudioStream(in);            
+            AudioPlayer.player.start(audios);        
+        }catch(Exception e){                    
+            JOptionPane.showMessageDialog(null, e);                
+        }
+        
     }//GEN-LAST:event_but3ActionPerformed
 
     private void but4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_but4ActionPerformed
         // TODO add your handling code here:
         String Enternumber = look.getText()+but4.getText();
         look.setText(Enternumber);
+        
+        InputStream in;        
+        try{            
+            in = new FileInputStream(new File("F:\\PBO\\tugas akhir\\4.wav"));            
+            AudioStream audios = new AudioStream(in);            
+            AudioPlayer.player.start(audios);        
+        }catch(Exception e){                    
+            JOptionPane.showMessageDialog(null, e);                
+        }
+        
     }//GEN-LAST:event_but4ActionPerformed
 
     private void but5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_but5ActionPerformed
         // TODO add your handling code here:
         String Enternumber = look.getText()+but5.getText();
         look.setText(Enternumber);
+        
+        InputStream in;        
+        try{            
+            in = new FileInputStream(new File("F:\\PBO\\tugas akhir\\5.wav"));            
+            AudioStream audios = new AudioStream(in);            
+            AudioPlayer.player.start(audios);        
+        }catch(Exception e){                    
+            JOptionPane.showMessageDialog(null, e);                
+        }
+        
     }//GEN-LAST:event_but5ActionPerformed
 
     private void but6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_but6ActionPerformed
         // TODO add your handling code here:
         String Enternumber = look.getText()+but6.getText();
         look.setText(Enternumber);
+        
+        InputStream in;        
+        try{            
+            in = new FileInputStream(new File("F:\\PBO\\tugas akhir\\6.wav"));            
+            AudioStream audios = new AudioStream(in);            
+            AudioPlayer.player.start(audios);        
+        }catch(Exception e){                    
+            JOptionPane.showMessageDialog(null, e);                
+        }
+        
     }//GEN-LAST:event_but6ActionPerformed
 
     private void but7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_but7ActionPerformed
         // TODO add your handling code here:
         String Enternumber = look.getText()+but7.getText();
         look.setText(Enternumber);
+        
+        InputStream in;        
+        try{            
+            in = new FileInputStream(new File("F:\\PBO\\tugas akhir\\7.wav"));            
+            AudioStream audios = new AudioStream(in);            
+            AudioPlayer.player.start(audios);        
+        }catch(Exception e){                    
+            JOptionPane.showMessageDialog(null, e);                
+        }
     }//GEN-LAST:event_but7ActionPerformed
 
     private void but8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_but8ActionPerformed
         // TODO add your handling code here:
         String Enternumber = look.getText()+but8.getText();
         look.setText(Enternumber);
+        
+        InputStream in;        
+        try{            
+            in = new FileInputStream(new File("F:\\PBO\\tugas akhir\\8.wav"));            
+            AudioStream audios = new AudioStream(in);            
+            AudioPlayer.player.start(audios);        
+        }catch(Exception e){                    
+            JOptionPane.showMessageDialog(null, e);                
+        }
     }//GEN-LAST:event_but8ActionPerformed
 
     private void but9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_but9ActionPerformed
         // TODO add your handling code here:
         String Enternumber = look.getText()+but9.getText();
         look.setText(Enternumber);
+        
+        InputStream in;        
+        try{            
+            in = new FileInputStream(new File("F:\\PBO\\tugas akhir\\9.wav"));            
+            AudioStream audios = new AudioStream(in);            
+            AudioPlayer.player.start(audios);        
+        }catch(Exception e){                    
+            JOptionPane.showMessageDialog(null, e);                
+        }
     }//GEN-LAST:event_but9ActionPerformed
 
     private void but0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_but0ActionPerformed
         // TODO add your handling code here:
         String Enternumber = look.getText()+but0.getText();
         look.setText(Enternumber);
+        
+        InputStream in;        
+        try{            
+            in = new FileInputStream(new File("F:\\PBO\\tugas akhir\\0.wav"));            
+            AudioStream audios = new AudioStream(in);            
+            AudioPlayer.player.start(audios);        
+        }catch(Exception e){                    
+            JOptionPane.showMessageDialog(null, e);                
+        }
     }//GEN-LAST:event_but0ActionPerformed
 
     private void plusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_plusActionPerformed
@@ -283,6 +422,15 @@ public class main extends javax.swing.JFrame {
         pertama = Integer.parseInt(look.getText());
         look.setText("");
         operator = "+";
+        
+        InputStream in;        
+        try{            
+            in = new FileInputStream(new File("F:\\PBO\\tugas akhir\\q.wav"));            
+            AudioStream audios = new AudioStream(in);            
+            AudioPlayer.player.start(audios);        
+        }catch(Exception e){                    
+            JOptionPane.showMessageDialog(null, e);                
+        }
     }//GEN-LAST:event_plusActionPerformed
 
     private void minusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_minusActionPerformed
@@ -290,6 +438,15 @@ public class main extends javax.swing.JFrame {
         pertama = Integer.parseInt(look.getText());
         look.setText("");
         operator = "-";
+        
+        InputStream in;        
+        try{            
+            in = new FileInputStream(new File("F:\\PBO\\tugas akhir\\q.wav"));            
+            AudioStream audios = new AudioStream(in);            
+            AudioPlayer.player.start(audios);        
+        }catch(Exception e){                    
+            JOptionPane.showMessageDialog(null, e);                
+        }
     }//GEN-LAST:event_minusActionPerformed
 
     private void multiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multiActionPerformed
@@ -297,6 +454,15 @@ public class main extends javax.swing.JFrame {
         pertama = Integer.parseInt(look.getText());
         look.setText("");
         operator = "*";
+        
+        InputStream in;        
+        try{            
+            in = new FileInputStream(new File("F:\\PBO\\tugas akhir\\q.wav"));            
+            AudioStream audios = new AudioStream(in);            
+            AudioPlayer.player.start(audios);        
+        }catch(Exception e){                    
+            JOptionPane.showMessageDialog(null, e);                
+        }
     }//GEN-LAST:event_multiActionPerformed
 
     private void perActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_perActionPerformed
@@ -304,12 +470,30 @@ public class main extends javax.swing.JFrame {
         pertama = Integer.parseInt(look.getText());
         look.setText("");
         operator = "/";
+        
+        InputStream in;        
+        try{            
+            in = new FileInputStream(new File("F:\\PBO\\tugas akhir\\q.wav"));            
+            AudioStream audios = new AudioStream(in);            
+            AudioPlayer.player.start(audios);        
+        }catch(Exception e){                    
+            JOptionPane.showMessageDialog(null, e);                
+        }
     }//GEN-LAST:event_perActionPerformed
 
-    private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
+    private void clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearActionPerformed
         // TODO add your handling code here:
         look.setText("");
-    }//GEN-LAST:event_jButton20ActionPerformed
+        
+        InputStream in;        
+        try{            
+            in = new FileInputStream(new File("F:\\PBO\\tugas akhir\\boo.wav"));            
+            AudioStream audios = new AudioStream(in);            
+            AudioPlayer.player.start(audios);        
+        }catch(Exception e){                    
+            JOptionPane.showMessageDialog(null, e);                
+        }
+    }//GEN-LAST:event_clearActionPerformed
 
     private void equalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_equalActionPerformed
         // TODO add your handling code here:
@@ -323,6 +507,15 @@ public class main extends javax.swing.JFrame {
         if(operator.equals("/"))
             hasil = pertama + kedua;
         look.setText(hasil+"");
+        
+        InputStream in;        
+        try{            
+            in = new FileInputStream(new File("F:\\PBO\\tugas akhir\\=.wav"));            
+            AudioStream audios = new AudioStream(in);            
+            AudioPlayer.player.start(audios);        
+        }catch(Exception e){                    
+            JOptionPane.showMessageDialog(null, e);                
+        }
     }//GEN-LAST:event_equalActionPerformed
 
     /**
@@ -371,8 +564,9 @@ public class main extends javax.swing.JFrame {
     private javax.swing.JButton but7;
     private javax.swing.JButton but8;
     private javax.swing.JButton but9;
+    private javax.swing.JButton clear;
     private javax.swing.JButton equal;
-    private javax.swing.JButton jButton20;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField look;
     private javax.swing.JButton minus;
     private javax.swing.JButton multi;
